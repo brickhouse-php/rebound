@@ -1,0 +1,71 @@
+{
+    "name": "brickhouse/rebound",
+    "description": "Real-time server capabilities for Brickhouse applications.",
+    "license": "MIT",
+    "keywords": [
+        "framework",
+        "brickhouse",
+        "websocket",
+        "rfc6455"
+    ],
+    "authors": [
+        {
+            "name": "Max T. Kristiansen",
+            "email": "me@maxtrier.dk",
+            "role": "Author",
+            "homepage": "https://maxtrier.dk"
+        }
+    ],
+    "homepage": "https://github.com/brickhouse-php/rebound",
+    "support": {
+        "issues": "https://github.com/brickhouse-php/rebound/issues",
+        "source": "https://github.com/brickhouse-php/rebound"
+    },
+    "scripts": {
+        "test": "pest"
+    },
+    "require": {
+        "php": "^8.4",
+        "amphp/socket": "^2.3",
+        "brickhouse/console": "dev-main",
+        "brickhouse/http": "dev-main"
+    },
+    "require-dev": {
+        "pestphp/pest": "^3.7",
+        "phpstan/phpstan": "^2.0"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "autoload": {
+        "psr-4": {
+            "Brickhouse\\Rebound\\": "src/"
+        },
+        "classmap": [
+            "src/"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Brickhouse\\Rebound\\Tests\\": "tests/"
+        }
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "extra": {
+        "brickhouse": {
+            "extensions": [
+                "\\Brickhouse\\Rebound\\Extension"
+            ]
+        }
+    },
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../framework/src/Brickhouse/http"
+        }
+    ]
+}

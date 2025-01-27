@@ -1,0 +1,12 @@
+parameters:
+
+    paths:
+        - src/
+
+    # Level 9 is the highest level
+    level: 7
+
+    treatPhpDocTypesAsCertain: false
+
+    ignoreErrors:
+        - identifier: return.unusedType
